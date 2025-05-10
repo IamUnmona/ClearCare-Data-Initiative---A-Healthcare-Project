@@ -1,7 +1,3 @@
-# ClearCare_Data_Initiative_A-Healthcare-Project
-A data-driven healthcare pricing transparency platform
-
-
 # 🏥 ClearCare: Healthcare Pricing Transparency Platform
 
 **Course**: BUAN 6390.002 | **Instructor**: Prof. Mandar Samant  
