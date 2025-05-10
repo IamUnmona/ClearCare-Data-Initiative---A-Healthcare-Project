@@ -33,7 +33,7 @@ The cleaned dataset contains the following standardized columns in the specified
 | `zip_code`                 | ZIP or postal code of the hospital location                                    |
 | `description`              | Description of the billed procedure or service                                 |
 | `billing_code`             | CPT or internal billing code used to identify the procedure                    |
-| `billing_code_type`        | Type of billing code (e.g., CPT, HCPCS, Internal)                              |
+| `billing_code_type`        | Type of billing code (e.g., CPT )                              |
 | `standard_charge`          | Published gross charge for the procedure/service                               |
 | `discounted_cash_charge`   | Discounted rate offered to self-pay patients                                   |
 | `payer_name`               | Name of the insurance provider                                                 |
