@@ -2,7 +2,6 @@
 
 **Course**: BUAN 6390.002 | **Instructor**: Prof. Mandar Samant  
 **Mentor**: Mr. Vijay Koneru  
-**Team**: Unmona Das, Ananya Canakapalli, Vishwa Upadhyay, Syed Ayaan, Rhea Rajesh, Amartya Yandrapu, Durga Sravya Kosuri
 
 ---
 
