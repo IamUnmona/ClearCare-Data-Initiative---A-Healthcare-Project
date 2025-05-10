@@ -20,6 +20,33 @@ ClearCare is a data-driven platform built to simplify and standardize U.S. hospi
 
 ---
 
+## 🧾 Final Output Schema
+
+The cleaned dataset contains the following standardized columns in the specified order:
+
+| **Column Name**            | **Description**                                                                 |
+|----------------------------|---------------------------------------------------------------------------------|
+| `hospital_name`            | Name of the hospital providing the service                                     |
+| `street_address`           | Parsed and standardized street address of the hospital                         |
+| `city`                     | City where the hospital is located                                             |
+| `state`                    | Two-letter state abbreviation                                                  |
+| `zip_code`                 | ZIP or postal code of the hospital location                                    |
+| `description`              | Description of the billed procedure or service                                 |
+| `billing_code`             | CPT or internal billing code used to identify the procedure                    |
+| `billing_code_type`        | Type of billing code (e.g., CPT, HCPCS, Internal)                              |
+| `standard_charge`          | Published gross charge for the procedure/service                               |
+| `discounted_cash_charge`   | Discounted rate offered to self-pay patients                                   |
+| `payer_name`               | Name of the insurance provider                                                 |
+| `plan_name`                | Specific plan under the listed insurance provider                              |
+| `negotiated_dollar`        | Dollar amount negotiated between hospital and insurer                          |
+| `negotiated_percentage`    | Percentage of the standard charge negotiated (if provided)                     |
+| `estimated_amount`         | Estimated patient out-of-pocket cost (if disclosed by the hospital)            |
+| `min_charge`               | Minimum charge negotiated under this plan                                      |
+| `max_charge`               | Maximum charge negotiated under this plan                                      |
+
+- This standardized schema enables consistent loading into PostgreSQL and easy integration into Tableau dashboards for cross-provider analysis.
+
+---
 ## ❗ Problem Statement
 
 Despite regulatory requirements:
