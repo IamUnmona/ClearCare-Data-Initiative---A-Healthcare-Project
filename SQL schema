@@ -1,0 +1,47 @@
+-- Hospital Table
+CREATE TABLE hospital (
+    hospital_id SERIAL PRIMARY KEY,
+    hospital_name TEXT NOT NULL UNIQUE,
+    hospital_address TEXT,
+    street_address TEXT,
+    city TEXT,
+    state TEXT,
+    zip_code TEXT,
+    region TEXT
+);
+
+
+-- Procedure Table
+CREATE TABLE procedure (
+    procedure_id SERIAL PRIMARY KEY,
+    billing_code VARCHAR(50),
+    billing_code_type VARCHAR(50),
+    description TEXT
+);
+
+-- Insurance Provider Table
+CREATE TABLE insurance_provider (
+    insurance_id SERIAL PRIMARY KEY,
+    payer_name VARCHAR(255) NOT NULL
+);
+
+-- Insurance Plan Table
+CREATE TABLE insurance_plan (
+    plan_id SERIAL PRIMARY KEY,
+    insurance_id INT REFERENCES insurance_provider(insurance_id),
+    plan_name VARCHAR(255) NOT NULL
+);
+
+-- Charges Table
+CREATE TABLE charges (
+    charge_id SERIAL PRIMARY KEY,
+    hospital_id INT REFERENCES hospital(hospital_id),
+    procedure_id INT REFERENCES procedure(procedure_id),
+    plan_id INT REFERENCES insurance_plan(plan_id),
+    standard_charge DECIMAL(10,2),
+    negotiated_dollar DECIMAL(10,2),
+    negotiated_percentage DECIMAL(5,2),
+    estimated_amount DECIMAL(10,2),
+    min_charge DECIMAL(10,2),
+    max_charge DECIMAL(10,2)
+);
